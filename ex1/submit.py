@@ -38,11 +38,12 @@ def output(part_id):
     mod = __import__(fname)
 
     func = getattr(mod, fname)
-
+    Y1 = np.mat(Y1).T
     if part_id == 1:
         return sprintf('%0.5f ', func())
     elif part_id == 2:
-        return sprintf('%0.5f ', func(X1, Y1, np.array([0.5, -0.5])))
+        print(func(X1, Y1, np.array([0.5, -0.5])))
+        return sprintf('%0.5f ',func(X1, Y1, np.array([0.5, -0.5])))
     elif part_id == 3:
         return sprintf('%0.5f ', func(X1, Y1, np.array([0.5, -0.5]), 0.01, 10))
     elif part_id == 4:
