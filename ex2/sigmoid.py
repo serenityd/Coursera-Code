@@ -6,6 +6,6 @@ def sigmoid(z):
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the sigmoid of each value of z (z can be a matrix,
 #               vector or scalar).
-
+    g
 # =============================================================
     return g
